@@ -102,9 +102,20 @@ class AddDialogView extends StatelessWidget {
       child: Column(
         children: [
           Gap(kSP10x),
-          TextFieldWidget(controller: nameController, hint: "Name"),
-          TextFieldWidget(controller: qtyController, hint: "Quantity"),
-          TextFieldWidget(controller: priceController, hint: "Price"),
+          TextFieldWidget(
+              controller: nameController,
+              hint: "Name",
+              type: TextInputType.text),
+          TextFieldWidget(
+            controller: qtyController,
+            hint: "Quantity",
+            type: TextInputType.number,
+          ),
+          TextFieldWidget(
+            controller: priceController,
+            hint: "Price",
+            type: TextInputType.number,
+          ),
           Gap(kSP10x),
           GestureDetector(
             onTap: () {
